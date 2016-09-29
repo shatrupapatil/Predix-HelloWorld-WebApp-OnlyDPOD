@@ -1,0 +1,640 @@
+$primary: #2196F3;
+
+
+
+.body {
+    font-family: 'GE-Inspira' !important;
+}
+/*Revision*/
+.list .item {
+/*    background-color: #161616;*/
+/*    color: #595959;*/
+}
+ion-item {
+/*    background-color: #161616 !important;*/
+}
+.item .icon-badge{
+    position: absolute;
+    top: 29%;
+    right: 100px;
+    font-size: 25px;
+}
+/*.item-complex .item-content, .item-radio .item-content{*/
+/*        background-color: #000;*/
+/*}*/
+/*.a.item-content.adjustOnMenuList{*/
+/*    background-color: #666;*/
+/*}*/
+.col.col-50{
+/*    border: 2px solid #4CAF50;*/
+    height: 100px;
+    text-align: center;
+}
+.image-list-thumb{
+    height: 60px;
+    
+}
+.button.round{
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+}
+.textadjust{
+    padding-top: 5px;
+}
+.clockadjust{
+    margin-top: 8px;
+    border: 2px solid #000;
+    box-shadow: 1px 1px 1px 1px #888888;
+}
+/*Login*/
+label.username.item.item-input{
+    border-radius: 8px;
+    width: 250px;
+    margin: 0% 10% 0% 15%;
+    margin-bottom: 10px;
+}
+label.password.item.item-input{
+    margin-top: 5%;
+    border-radius: 8px;
+    width: 250px;
+    margin: 0% 10% 0% 15%;
+}
+label.remeberMe{
+    color: white;
+}
+li.item.item-checkbox{
+    border: none;
+    margin-left: 30px;
+    margin-top: -20px;
+}
+
+.checkbox input:before, .checkbox-icon:before{
+    border-radius: 0px;
+}
+
+button.loginSubmit.button.button-block.button-calm{
+    
+    width: 150px;
+    margin-left: 90px;
+}
+.loginBackground{
+    background-image: url('images/bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+div.list{
+    margin-top: -23px !important;
+}
+.checkBoxCustome{
+    margin: 4% 0% 0% 16% !important;
+    height: 20px;
+    padding: 10px;
+    border-radius: 0px;
+}
+.logo{
+    content:url('images/ge_icon.png');
+    width: 75px;
+    height: 75px;
+    margin: 10% 35% -30% 37%;
+}
+.userNameImage{
+    content: url('images/username.png');
+    width: 15px;
+    height: 15px;
+    margin-left: -3px;
+/*    margin: 32% 35% -30% 21%;*/
+
+}
+.PasswordImage{
+    content: url('images/password.png');
+    width: 15px;
+    height: 15px;
+    margin-left: -3px;
+    /*    margin: 32% 35% -30% 21%;*/
+}
+.sublogo{
+    content: url('images/dPOD_logo.png');
+    width: 42px;
+    height: 42px;
+    margin: 42% 35% -30% 21%;
+}
+.signin-text{
+    margin: 30% 20% -50% 34% !important;
+    color: white;
+    font-family: 'GE-Inspira' !important;
+}
+.signin-text1{
+   
+   margin: 11% 20% -50% 37% !important;
+   font-size: 48px;
+   color: white;
+   font-family: 'GE-Inspira' !important;
+    
+}
+.signin-text2{
+    font-size: 12px;
+    /* margin: 49% 20% -50% 37% !important;*/
+    margin: 50% 0% -45% 19% !important;
+    color: white;
+    font-family: 'GE-Inspira' !important;
+}
+.signInImg{
+    content: url('images/Sign-icon.png');
+    float: left;
+    width: 25px;
+    padding-top: 7px !important;
+}
+
+button.loginSubmit.button.button-block.button-calm{
+/*    background-color: #005eb8;;*/
+    border: none;
+    text-align: center;
+    width: 120px;
+    margin-left: 120px;
+}
+/*Login on textField*/
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+.checkbox-icon{
+    width: 23px  !important;
+    height:21px  !important;
+}
+.login {
+    
+   margin-top: 45%;
+    margin-right: 1%;
+    margin-left: 1%;
+/*    width: 300px;*/
+}
+.login-screen {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 5px
+}
+
+.app-title {
+    text-align: center;
+    color: #FFF;
+}
+
+.login-form {
+    text-align: center;
+}
+.control-group {
+    margin-bottom: 10px;
+}
+
+#login-name {
+    color: #FFF;
+    margin-left: 10px;
+    margin-bottom: -3px;
+    font-size: 12px;
+/*    background-color: #ECF0F1;*/
+/*    border: 2px solid transparent;*/
+/*    border-radius: 3px;*/
+/*    font-size: 14px;*/
+/*    font-weight: 200;*/
+/*    padding: 10px 0;*/
+/*    width: 250px;*/
+/*    transition: border .5s;*/
+/*    color:#000;*/
+    font-family: 'GE-Inspira' !important;
+}
+
+#login-psw{
+    margin-left: 10px;
+    margin-bottom: -3px;
+    font-size: 14px;
+/*    background-color: #ECF0F1;*/
+/*    border: 2px solid transparent;*/
+/*    border-radius: 3px;*/
+/*    font-size: 14px;*/
+/*    font-weight: 200;*/
+/*    padding: 10px 0;*/
+/*    width: 250px;*/
+/*    transition: border .5s;*/
+/*    color:#000;*/
+color: #FFF;
+    font-family: 'GE-Inspira' !important;
+}
+
+input:focus {
+/*border: 2px solid #3498DB;*/
+    box-shadow: none;
+}
+div.popup{
+    border-radius: 10px;
+}
+div.item.item-body{
+border-top: 2px solid rgb(199, 199, 199);
+}
+
+.special-class{
+    background-color: #FFFFFF !important;
+    font-weight: 900 !important;
+     margin-top: -7px;
+
+}
+.login-link {
+    font-size: 12px;
+    color: #444;
+    display: block;
+    margin-top: 12px;
+}
+.alCheckbox{
+    background-color: transparent;
+    border-color: transparent;
+    margin-top:-19px;
+ 
+}
+#login-button7{
+    font-family: 'GE-Inspira' !important;
+    top: -10px;
+    font-weight: 900;
+    background-color: #005eb8;
+}
+
+/*Sarvesh Changes*/
+.ge-header-icon{
+    content: url('images/ge_icon.png');
+    float: left;
+    margin-top: 5px !important;
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+ion-content{
+/*    margin-top: 20px !important;*/
+    background-color: lightgray;
+}
+div.dPODHeader.bar.bar-header{
+    background-color: black;
+    margin-top: 20px !important;
+}
+h1.title.dPODheader{
+    color: white;
+    margin-top: 10px !important;
+    font-size: 25px;
+}
+label.item.item-input.searchTasks{
+    border-radius: 20px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+svg.nvd3-svg{
+    height: 150px !important;
+}
+ion-item.item.TaskMenu{
+    padding: 0px !important;
+    border-radius: 5px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+div.infoContent{
+    width: 90%;
+    position: relative;
+    left: 65px;
+    top: -75px;
+}
+label#rounded{border-radius:5px; }
+/*img.turbineStatus{*/
+/*    position: relative;*/
+/*    top: -25px;*/
+/*    height: 35px;*/
+/*}*/
+label.item.item-input.searchTasks{
+    border-radius: 25px;
+    padding: 0 0 0 5px !important;
+}
+label input.searchbar{
+    border: 0px !important;
+}
+div.item-content.disable-pointer-events{
+    margin-left: -20px;
+    font-size: 14px;
+    margin-top: -6px;
+}
+
+/*Sarvesh Changes*/
+/*Info*/
+.InfoPageColor{
+    background-color: #FFFFFF;
+}
+.TurbinID{
+    /*    margin: 30% 20% -50% 34% !important;*/
+    color: #3B99FF;
+}
+.col.col-50{
+    /*    border: 2px solid #4CAF50;*/
+    height: 80px;
+    text-align: center;
+}
+.col.col-50.forText1{
+    color:#0EB1E3;
+    border-right: 2px solid #0EB1E3;
+    margin-top: -15px;
+
+
+
+}
+.startOfTheDay-button10{
+   border-radius: 15px !important;
+    
+}
+.col.col-50.forText2{
+    
+
+
+   color: #0EB1E3;
+    
+}
+.row{
+  background-color:#2473FF:
+}
+.item.item-body{
+     background-color:#2473FF:
+}
+#MarkButton{
+    
+    
+/*    border-radius: 15px !important;*/
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    
+}
+.item-content.adjustOnMenuList{
+    background-color: #666666;
+    color:#FFFFFF;
+}
+.has-header{
+    background-color: #edebe5;
+}
+.scroll-content.ionic-scroll.has-header{
+    background.color:lightgray;
+}
+.nv-legendWrap.nvd3-svg{
+    pointer-events: none;
+/*    display: none;*/
+/*    background-image: url('img/taskInProgress.png');*/
+
+}
+/*TaskInfo NEW*/
+.addColorandIcon{
+    background-color:#2CB1E3;
+}
+
+/*image on header*/
+
+img.foo {
+    z-index: -1;
+    position: absolute;
+}
+.my-back-button{
+/*     background-image: url('img/TaskInfo/back_3x.png');*/
+/*content:url('img/backarrow.png');*/
+content: url('img/ge_icon.png');
+width: 35px;
+}
+.container{
+    width: 100%;
+    border: 1px solid red;
+    overflow: hidden;
+    padding: 1px ;
+}
+.column1{
+    width: 33.33%;
+    float: left;
+    height: 100px;
+    background: #ccc;
+    text-align: center;
+    margin-left: 0px;
+}
+.column2{
+    width: 33.33%;
+    float: left;
+    height: 100px;
+    background: #ccc;
+    text-align: center;
+    margin-left: 0px;
+}
+.column3{
+    width: 33.33%;
+    float: left;
+    height: 100px;
+    background: #ccc;
+    text-align: center;
+    margin-left: 0px;
+}
+ion-content#taskDetails div.scroll.padding{
+    padding:0px !important;
+}
+/*Image open*/
+
+/* Empty. Add your own CSS if you like */
+.image-modal {
+    width: 100% !important;
+    height: 100%;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.transparent {
+    background: transparent !important;
+}
+
+.fullscreen-image {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+.image-list-thumb {
+    
+    padding: 2px 2px 2px 0px;
+    
+/*    height: 100px;*/
+}
+
+img.turbineStatus{
+    z-index:-1;
+    position:relative;
+    margin-top: -10px;
+    width: 60px;
+}
+.wide-as-needed {
+    overflow: scroll;
+    white-space: nowrap;
+    width: 100%;
+  
+}
+.scroll {
+    min-width: 100%;
+}
+
+
+.centerme {
+    margin: 0 auto;
+    width: 100%;
+    height:100%;
+}
+
+.fullscreen-player {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.sample-show-hide {
+    transition: all linear 0.5s;
+}
+
+.sample-show-hide.ng-hide {
+    opacity: 1;
+}
+
+ion-scroll#imgscroll div.scroll{
+    width:600px !important;
+}
+/******* TaskInfo.html **********/
+.scrolldiv{
+    float: left;position: relative;padding-bottom: 2px;margin-top: 10px;
+}
+.scrollimage{
+    display: block; margin-left:10px;width:100px;height:100px;
+}
+.cancelButtonOnimage{
+    position: absolute; left: 35px; height: 16px; width: 16px; margin-top: -95px; margin-left: 50px;
+}
+
+
+button.button-block.button-balanced.taskAPicture{
+        background-color:  rgb(72, 72, 72);text-align: left;height: 40px;min-height: 0px !important;line-height: 33px !important;font-size: 18px;width: 300px;margin-left: 10px;top: 2px;
+}
+
+.taskAPictureimg{
+    height: 20px; float: left; margin-top: 5px;margin-right:50px
+}
+.input-label.FleetNotes{
+    font-size: 14px;width: 150px;margin-left: 10px;font-family: 'GE-Inspira' !important;
+}
+label.item.item-input.LabelFleetNotes{
+    width: 300px;margin-left: 10px;margin-top: -6px;
+}
+.input-label.SiteNotes{
+    font-size: 14px;width: 150px;margin-left: 10px;font-family: 'GE-Inspira' !important;
+}
+label.item.item-input.SiteNotes{
+   width: 300px;margin-left: 10px;margin-top: -6px;
+}
+#Fleet-textarea{
+    height: 50px;margin-left: -10px;
+}
+#Site-textarea{
+    height: 50px;margin-left: -10px;color:red;
+}
+.save-changes:disabled {
+    color: #000000;
+}
+.eag-home-label.markAs{
+    margin-top: -8px;color: rgb(35, 35, 35);font-size: 10px;text-align: center;font-family: 'GE-Inspira' !important;
+}
+.eag-home-label.completedStatus1{
+    margin-top: -18px;color: rgb(35, 35, 35);font-size: 15px;text-align: center;font-family: 'GE-Inspira' !important;
+}
+.eag-home-label.completedStatus2{
+    margin-top: 5px;color: rgb(35, 35, 35);font-size: 15px;text-align: center;font-family: 'GE-Inspira' !important;
+}
+.image-list-thumb.check{
+    margin: 15px -5px 8px 0px;width: 70px;
+}
+#completedornot{
+    background-color: rgb(255, 255, 255); width: 140px; height: 140px; border: 5px solid white; padding: 5px; float: right;text-align: center; margin: -5px -5px 8px 10px;
+}
+.CheckMarkStatus{
+    width: 140px; height: 140px;padding: 5px; float:right; margin-top: -10px;margin-right: 10px;
+}
+.timerStatus{
+    font-size: 15px;margin-top:-18px; text-align: center;color: rgb(35, 35, 35);font-family: 'GE-Inspira' !important;
+}
+#videoArea1{
+    margin:25px 20px 20px 40px;
+}
+#videoArea2{
+    margin: 18% 20% 20% 27%
+}
+
+.PlayOrPause{
+    background-color: white; width: 140px; height: 140px; border: 1px solid lightgrey; padding: 5px; float: left; margin-top: -10px; margin-left: 10px;
+}
+.Timeelapsed{
+    margin-top: -38px;color: gray;font-size: 10.5px;margin-left: 52.9%;float: left;font-family: 'GE-Inspira' !important;
+}
+.timeOnly{
+    font-size: 16px;margin-top: -30px;color: #0072bc;margin-left: 52.9%;top: 22px;font-family: 'GE-Inspira' !important;
+}
+.lastIndex{
+    float: right; content: url('images/forward_arrow.png'); height: 13px;width: 9px;margin-right: 10px;margin-top: -25px;
+}
+.fastIndex{
+    float: left; content: url('images/back-arrow.png'); height: 13px; width: 9px; margin-left: 9px;
+}
+.taskNameOnly{
+    color: rgb(32, 32, 32); margin-top: 15px;margin-left: 10px;margin-right: 10px; font-size: 13px; text-align:center;font-weight: bold;font-family: 'GE-Inspira' !important;
+}
+.DigiformButton{
+    font-size: 12px;position: relative;left: 4px;top: 30px;float: right;border: 1px solid grey;border-radius: 15px;margin-right: 5px;padding-left: 12px;padding-right: 12px;padding-bottom: 4px;color: white;font-weight: bold;background-color: grey;margin-top: -25px;padding-top: 3px;font-family: 'GE-Inspira' !important;
+}
+.turbainId{
+    position: absolute;color: white;font-size: 13px;font-weight: bold;margin-top: -30px;margin-left: 22px;text-align: center;width: 33px;font-family: 'GE-Inspira' !important;
+}
+.turbinidDiv{
+    margin-left: 10px; padding-left: 2px; padding-top: 25px; padding-right: 7px; padding-bottom: 4px; border-radius: 4px; margin-left: 5px;
+}
+#taskDetails{
+    background-color: #edebe5;top: 50px; padding: 0px !important;
+}
+.sysbutton{
+    float: right; height: 20px; margin-right: 5px; margin-top: 7px; width: 20px;
+}
+/******* TaskInfo.html **********/
+
+
+/******* Planning.html **********/
+.updateTaskStatusCheck{
+    content: url('images/Green_complete.png');
+    width: 18px;
+    height: 15px;
+    margin-top: -8%;
+    margin-right: -18%;
+}
+.item-complex .item-content{
+    background-color: transparent !important;
+}
+
+/*.item .item-content {*/
+/*    background-color: transparent !important;*/
+/*}*/

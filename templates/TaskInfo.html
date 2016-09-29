@@ -1,0 +1,145 @@
+<ion-view title="Task"  ng-app="app.controllers" ng-controller="taskInfoCtrl" id="page1" class="InfoPageColor" overflow-scroll="true" hide-back-button="true">
+            <ion-nav-bar class="bar-dark">
+                           <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>
+            </ion-nav-bar>
+
+            <ion-nav-buttons side="left">
+                            <button class="button button-icon icon ion-ios-arrow-back" ng-click="HomePageMove()"></button>
+            </ion-nav-buttons>
+
+            <ion-nav-buttons side="right">
+                            <img src="img/Send_icon.png" ng-click="PostDatatoServer()" class="sysbutton"/>
+            </ion-nav-buttons>
+
+
+<ion-content id="taskDetails" padding="true" class="padding has-subheader">
+        <div>
+
+        <div class="turbinidDiv">
+        <div style="margin-top: 5%;margin-left: 0.5%;display: inline-block;">
+
+        <img class="turbineStatus" ng-src="{{turbineStatus == 'Off' && 'img/Turbine_red_3X.png' || 'img/Turbine_green_3X.png'}}"/>
+
+
+
+        <div class="turbainId">{{turbain_ID}}
+        </div>
+
+        </div>
+        <div style="display: inline;">
+        <p ng-click="OpenDigiform()" class="DigiformButton">Digiforms</p>
+        </div>
+
+
+
+        </div>
+
+
+        </div>
+
+
+        <div class="title" on-swipe-left="reload(nextTurbNum)" on-swipe-right="reload(prevTurbNum)">
+
+        <div class="fastIndex" ng-hide="turbIndex<=0"></div>
+
+        <div style="margin-top: -5px;">
+            <h4 class="taskNameOnly">{{taskName}}</h4>
+        </div>
+
+           <div ng-hide="turbIndex>=length" class="lastIndex"></div>
+
+
+        </div>
+
+
+        <div>
+        <span>
+        <img src="img/timer_icon.png"  style="margin-left: 37%;height: 30px;width: 30px;">
+        </span>
+        <span style:"display:inline">
+        <p class="timeOnly">{{hours}}:{{MintestValue}}:{{timerWithTimeout}}</p><br>
+        <p class="Timeelapsed">Time elapsed</p>
+        </span>
+        </div>
+        </div>
+
+
+
+
+
+        <div >
+        <div>
+
+
+        <div class="PlayOrPause">
+        <img ng-src={{StartImage}} ng-if="StartImage =='img/TaskInfo/Play_3x.png'" ng-disabled="disableTimer" ng-click="startTimerWithTimeout()" id="videoArea1" class="image-list-thumb" height: 41px;>
+        <img ng-src={{StartImage}} ng-if="StartImage =='img/Playgreen_3x.png'" ng-disabled="disableTimer" ng-click="startTimerWithTimeout()" id="videoArea2" class="image-list-thumb" height: 41px;></br><p class="timerStatus">{{buttonText}}<p>
+        </div>
+
+
+        <div ng-disabled="disableClick" class="CheckMarkStatus">
+        <div ng-click="stop()" id="completedornot">
+        <img src="img/completed_icon.png"  class="image-list-thumb check" height: 30px;>
+        <br>
+        <p ng-if="completedStatus=='Complete'" class="eag-home-label markAs">Mark as</p>
+
+
+
+
+        <p ng-if="completedStatus=='Complete'" class="eag-home-label completedStatus1">{{completedStatus}}</p>
+        
+        <p ng-if="completedStatus=='Completed'" class="eag-home-label completedStatus2">{{completedStatus}}</p>
+
+        </div>
+        <div>
+
+        </div>
+
+
+        </div>
+        </div>
+        </div>
+
+        <div>
+
+        <div>
+            <span class="input-label SiteNotes">Notes</span>
+            <label class="item item-input SiteNotes">
+                <textarea placeholder="" ng-model="Sitearea" id="Site-textarea" class="save-changes" disabled> </textarea>
+            </label>
+        </div>
+
+        <div style="margin-top: 0px;">
+            <span class="input-label FleetNotes">Resolution</span>
+            <label class="item item-input LabelFleetNotes">
+                <textarea placeholder="" ng-model="FleetArea" id="Fleet-textarea" required> </textarea>
+            </label>
+        </div>
+
+
+        <button class="button button-block button-balanced taskAPicture" id="MarkButton" ng-click="GetImage()">
+                 <img src="img/TaskInfo/camera_3X.png" class="taskAPictureimg">
+                 <b style="font-family: 'GE-Inspira' !important;">Take a picture</b>
+
+        </button>
+        
+              <ion-scroll id="imgscroll" direction="x" class="wide-as-needed">
+                    <div ng-repeat="img in images" class="scrolldiv" >
+                        <img ng-src="{{img}}" class="scrollimage"  ng-click="chooseimage(img)" id="saveimages{{$index}}">
+                        <img ng-src="img/cancel_image.png" class="cancelButtonOnimage"  ng-click="deletedImage(img)">
+                    </div>
+              </ion-scroll>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+</ion-content>
+</ion-view>

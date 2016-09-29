@@ -1,0 +1,131 @@
+<ion-view title="Planning" id="page1">
+
+
+
+
+
+<ion-nav-buttons side="right">
+    <img src="img/Send_icon.png"  style="float: right; height: 20px; margin-right: 5px; margin-top: 7px; width: 20px;"/>
+</ion-nav-buttons>
+
+
+
+    <ion-content padding="true" class="" style="overflow-x:">
+        
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="doRefresh()">
+        </ion-refresher>
+        
+        <label id ="rounded" class="item item-input" style="height: 35px; margin-top: 1px; margin-left: :12px;">
+            <img src="img/Search.png" style="height: 25px;width: 25px;margin-left: -10px;">
+            <input type="text" placeholder="Search Turbine" ng-model="searchQuery">
+        </label>
+        
+
+
+        
+        
+     <div>
+         <h4 style="margin-top: 10px; color: rgb(123, 123, 120); font-family: 'GE-Inspira' !important; font-size: 15px; margin-left: -1px;">Production Estimates<a style="float: right; margin-top: -2px; content: url(img/Arrow.png); height: 20px; width: 20px; margin-right: -1px"></a></h4>
+        
+        
+        
+        
+        
+       
+        
+    </div>
+     <div class = "" style="border-radius: 10px !important;margin-top: 20px;max-height: 80px !important;">
+         <div class="" style=" width: 30%;top: -15px;display: inline-block;margin-right: 1%;margin-left: -2px;position: relative;   ">
+            <h3 style="font-size: 17px; font-family: 'GE-Inspira' !important;">111.52<sup style="font-size: 8px; font-family: 'GE-Inspira' !important;">MWH</sup></h3>
+            <p style=" margin: 0 0 0px;margin-top: -10px;color: rgb(123, 123, 120);font-family: 'GE-Inspira' !important;font-size: 12px;margin-left: 3px">Maximum</p>
+         </div>
+         <div class = "" style="width: 32%;top: -15px;margin-right: 1.5%;display: inline-block;position: relative;border-right: 1px solid rgb(123, 123, 120);left: 20px">
+            <h3 style="font-family: 'GE-Inspira' !important;font-size: 17px";>106.52<sup style="font-size: 8px; font-family: 'GE-Inspira' !important;">MWH</sup></h3>
+            <p style="margin: 0 0 0px;margin-top: -10px;font-family: 'GE-Inspira' !important;color: rgb(123, 123, 120);font-size: 12px;margin-left: 3px;">Deficiencies</p>
+         </div>
+         <div class = "" style="width: 30%;top: -15px;display: inline-block;position: relative;left: 35px;">
+             <h3 style="font-size: 17px; font-family: 'GE-Inspira' !important;margin-left: -4px;">109.43<sup style="font-size: 8px; font-family: 'GE-Inspira' !important;">MWH</sup></h3>
+             <p style=" margin: 0 0 0px;margin-top: -10px;color: rgb(123, 123, 120);font-family: 'GE-Inspira' !important;font-size: 12px;margin-left: -2px;">This Plan</p>
+         </div>
+     </div>
+    
+   
+
+
+        
+        <ion-list style="margin-top: -20px;" show-delete="data.showDelete" show-reorder="data.showReorder">
+        <div ng-repeat="GetTurbai in GetTurbaiDatas | filter:searchQuery">
+        <ion-item ng-click="DetailsPage(GetTurbai.task_turbine_id)" class="item item-stable TaskMenu" style="margin-top: 12px;">
+                <div class="taskInfo" style="width: 100%;display: inline-block;height: 45px;">
+                    
+                    
+                    
+                    
+                    <div style="margin-top: 5%;margin-left: 3%;display: inline-block;">
+                        
+                        <img class="turbineStatus" ng-src="{{GetTurbai.task_turbine_status == 'Off' && 'img/Turbine_red_3X.png' || 'img/Turbine_green_3X.png'}}"/>
+                                        
+    
+                                        
+                                        <div style="position: absolute;color: white;font-size: 15px;font-weight: bold;margin-top: -28px;margin-left: 22px;text-align: center;width: 33px; font-family: 'GE-Inspira' !important;">{{GetTurbai.task_turbine_id}}
+                                        </div>
+                                       
+                    </div>
+
+<!--                   <img src="img/cancel.png" style="height: 25px;width: 25px;float: right;margin-top: 6px;margin-right: 8px;">-->
+
+                       <img ng-show="!isGroupShown(GetTurbai.task_turbine_id)" src="img/Add.png" style="height: 25px;width: 25px;float: right;margin-top: 6px;margin-right: 5px;">
+                       <img ng-show="isGroupShown(GetTurbai.task_turbine_id)" src="img/collapse.png" style="height: 25px;width: 25px;float: right;margin-top: 6px;margin-right: 5px;">
+   
+                       
+                       
+                       
+                       
+
+                    <div style="float: right;border: 1px solid gray;display: inline;padding-right: 5px;padding-bottom: 2px;border-radius: 4px;margin-top: 5px;margin-right: 6px;">
+                        <img src="img/timer.png" style="position: relative;left: 3px;top: 4px;height: 17px;width: 17px;"><span style="padding-left: 6px; font-family: 'GE-Inspira' !important;">{{GetTurbai.task_est_duration_hrs}}</span></div>
+                    
+      
+      
+                    
+               
+                    
+                    
+                    
+               </div>
+             
+             
+               
+        </ion-item>
+        <ion-item ng-click="ItemDetailspage(Taskname.task_id)" ng-show="isGroupShown(GetTurbai.task_turbine_id)" style="height: 40px;background-color: #F5F5F5" ng-repeat ="Taskname in TaskNames" ng-class="{'special-class': $index == 0  }" >
+            <ion-option-button class="button"
+                ng-click="edit()" style="margin-top: -8px;">
+                <img src="img/cancel.png" style="height: 23px;width: 23px;float: right;">
+            </ion-option-button>
+            <div style="margin-top: -7px">
+   <img ng-src="img/taskStatus/{{Taskname.taskType}}" style="margin-left: -6px;height: 18px;width: 19px;">
+
+                
+<!--                  <img style="margin-left: -6px;height: 18px;width: 19px;" ng-src="$index == 0 && img/taskStatus/{{Taskname.taskType}}|| img/secondimages/{{Taskname.taskType}}"/>-->
+
+                    
+                    
+                    
+                    
+                     <p class="ng-binding" style="margin-top: -23px;margin-left: 25px;font-size: 16px; font-family: 'GE-Inspira' !important;">{{Taskname.task_name}} </p><i ng-if="Taskname.task_status == 'updated'" class="updateTaskStatusCheck" style="float:right"></i>
+                     <span class="item-note"></span>
+                     
+            </div>
+     </ion-item>
+        
+        
+
+        </div>
+            
+            
+        </ion-list>
+        
+    </ion-content>
+</ion-view>

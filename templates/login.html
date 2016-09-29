@@ -1,0 +1,79 @@
+<ion-view  ng-app="app.controllers" ng-controller="loginCtrl" overflow-scroll="true">
+    <ion-content has-bouncing="false" class="padding loginBackground" >
+        
+        <img class="logo" alt="GE"></img>
+        
+        <!--            <h5 class="signin-text"> Welcome to GE</h5>-->
+        <img class="sublogo" alt="GE"></img><h1 class="signin-text1">dPOD</h1>
+        <h6 class="signin-text2">Powered by GE Renewable Energy</h6>
+        
+        <div class="login">
+    <div class="login-screen">
+        <label class="item item-input" style="background-color: transparent;">
+            <img class="userNameImage" alt="GE"></img>
+<!--            <i style="background-image: url('img/username.png');height:10px; background-repeat: repeat-x;width:10px;"></i>-->
+      <input type="text" placeholder="SSO" ng-model="user.email" id="login-name" ng-model="SSOId" ng-keyup="disableReturnButton($event)">
+        </label>
+        
+        <label class="item item-input" style="background-color: transparent;top: 10px;">
+            <img class="PasswordImage" alt="GE"></img>
+            <input type="password" placeholder="Password" id="login-psw" ng-model="SSOPsw" ng-keyup="disableReturnButton($event)">
+        </label>
+        
+        <div style="float: left;margin-left: -27px;margin-top: 20px;">
+            
+            
+            
+            
+            
+            <label class="checkbox checkbox-square">
+                
+                <ion-checkbox ng-model="checkStatus" ng-click="checkboxstatus()" class="alCheckbox" id="chk" style="background-color: transparent; border-color: transparent;font-family: 'GE-Inspira' !important;color:#FFF;">Remember My SSO</ion-checkbox>
+                
+               
+            </label>
+        </div>
+       
+       <button id="login-button7" class=" button button-positive  button-block " ng-click="LoginCheck(SSOId,SSOPsw);">Login</button>
+
+
+
+<!--                <div class="app-title">-->
+<!--                    <!--                        <a class="button button-icon icon ion-key"></a>-->
+<!--                    <img src="img/icon_key_3X.png" style="height: 20px; width: 20px;margin-left: -14px;margin-top: -7px;">-->
+<!--                        </div>-->
+<!--                -->
+<!--                <div class="login-form">-->
+<!--                    <div class="control-group">-->
+<!--                        <input type="text" class="login-field" value="" placeholder="User Name" id="login-name" ng-model="SSOId">-->
+<!--                            <label class="login-field-icon fui-user" for="login-name"></label>-->
+<!--                            </div>-->
+<!--                    -->
+<!--                    <div class="control-group">-->
+<!--                        <input type="password" class="login-field" value="" placeholder="Password" id="login-psw" ng-model="SSOPsw">-->
+<!--                            <label class="login-field-icon fui-lock" for="login-pass"></label>-->
+<!--                            -->
+<!--                            </div>-->
+<!--                    <div style="float: left;margin-left: -15px;">-->
+<!--                        <label class="checkbox checkbox-square">-->
+<!--                            -->
+<!--                            <ion-checkbox ng-model="checkStatus" ng-click="checkboxstatus()" class="alCheckbox" id="chk" style="background-color: #666; margin-top: -16px;border-color: #666;font-family: 'GE-Inspira' !important;">Remember My SSO</ion-checkbox>-->
+<!--                            -->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    -->
+<!--                    -->
+<!--                    <!--                        <button id="login-button7" class=" button button-positive  button-block " ng-click="LoginCheck(SSOId,SSOPsw);">Log in</button>-->
+<!--                    <button id="login-button7" class=" button button-positive  button-block " ng-click="LoginCheck(SSOId,SSOPsw);">Log in</button>-->
+<!--                    -->
+<!--                    -->
+<!--                </div>-->
+            </div>
+        </div>
+        
+        
+        
+        
+        
+    </ion-content>
+</ion-view>
